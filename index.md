@@ -1,8 +1,46 @@
-## Welcome to GitHub Pages
+## Intro
 
-You can use the [editor on GitHub](https://github.com/dkurganov/real_number_game/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+I am doing the real numbers game as found [here](https://wwwf.imperial.ac.uk/~buzzard/xena/rng090720/). It turns out that there are a few versions floating around, so while this game isn't finalised this is the version I'll working on.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+It's mid-July now, for reference.
+
+## Set World
+
+Level 1
+
+```
+rw subset_iff,
+intros x inx,
+use inx,
+```
+
+Level 2
+
+```
+--rw subset_iff,
+intros x xin,
+rw mem_union_iff,
+use xin, 
+```
+
+I commented out the rewrite because as far as lean is concerned, a hidden definition is no different from an actual definition.
+But while typing things out it's a friendly helper.
+
+Level 3
+
+```
+intros x xin,
+rw mem_inter_iff at xin,
+use xin.left,
+```
+
+I personally find it much nicer to 'dig in' to those proofs that include \(\and, \leftrightarrow \) as opposed to splitting it and then dealing with it. The second way seems pretty clunky and childish.
+
+Level 4
+
+```
+...
+```
 
 ### Markdown
 
